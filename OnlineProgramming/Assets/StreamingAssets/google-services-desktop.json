@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "893041476870",
+    "project_id": "multitest-52865",
+    "storage_bucket": "multitest-52865.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893041476870:android:86559a868f8dc72fe94a87",
+        "android_client_info": {
+          "package_name": "com.UnityTechnologies.com.unity.template.urpblank"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBPJAXZ00V5mypIA06AOCT8L1S5TUeR2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
