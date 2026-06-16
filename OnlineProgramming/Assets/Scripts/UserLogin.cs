@@ -1,8 +1,9 @@
-using UnityEngine;
 using Firebase.Database;
-using UnityEngine.UI;  
 using PimDeWitte.UnityMainThreadDispatcher;
 using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;  
 
 public class UserLogin : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class UserLogin : MonoBehaviour
 
     [SerializeField] InputField NickNameInput;
     [SerializeField] Text checkText;
+
+    [Header("Scene")]
+    [SerializeField] string NextSceneName = "InventoryScene";
+    [SerializeField] bool LoadNextSceneAfterLogin = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,7 +71,15 @@ public class UserLogin : MonoBehaviour
                     PlayerPrefs.SetString("UserNickName", nickName);
                     PlayerPrefs.Save();
 
+                    LoadNextSceneAfterLogin = true;
+
                     checkText.text = "로그인 성공";
+
+                    if (LoadNextSceneAfterLogin)
+                    {
+                        SceneManager.LoadScene(NextSceneName);
+                    }
+
                 });
 
                 break;
